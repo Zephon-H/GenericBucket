@@ -7,7 +7,7 @@
         "url": "https://github.com/Molunerfinn/PicGo/blob/dev/LICENSE"
     },
     "url": "https://github.com/Molunerfinn/PicGo/releases/download/v2.3.0-beta.8/PicGo-Setup-2.3.0-beta.8-x64.exe#dl.7z",
-    "hash": "b9541355852ed5f04f0003e5c568f6b9572b8d7dcd3604a82b7a1c24050533ba",
+    "hash": "sha512: 52974ad8b5ae9d90e3465bd2631ac82f6ad47840091bc361ecf9d96449e2014f72ba7dbf58643d6352bc4a3e291b3f49a15049788a8da489bacee70369d229c3",
     "installer": {
         "script": [
             "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
@@ -26,7 +26,7 @@
         "regex": "releases/tag/v([\\d.]+)\""
     },
     "autoupdate": {
-        "url": "https://github.com/Molunerfinn/PicGo/releases/download/v$version/picgo-setup-$version.exe#/dl.7z",
+        "url": "https://github.com/Molunerfinn/PicGo/releases/download/v$version/PicGo-Setup-$version.exe#/dl.7z",
         "hash": {
             "url": "https://github.com/Molunerfinn/PicGo/releases/download/v$version/latest.yml",
             "mode": "extract",
