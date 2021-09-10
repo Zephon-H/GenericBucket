@@ -7,7 +7,7 @@
         "url": "https://github.com/Molunerfinn/PicGo/blob/dev/LICENSE"
     },
     "url": "https://github.com/Molunerfinn/PicGo/releases/download/v2.3.0-beta.8/PicGo-Setup-2.3.0-beta.8-x64.exe#dl.7z"
-    "hash": "sha512:18144b18773c4ddb5aaebd3b51bc1e8c437deed80e0bdf1029d033d7374d56cc001052a4225a8901d3f85dd9408abf394cb7745de0164623240913cc7b9623d9",
+    "hash": "b9541355852ed5f04f0003e5c568f6b9572b8d7dcd3604a82b7a1c24050533ba",
     "installer": {
         "script": [
             "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
