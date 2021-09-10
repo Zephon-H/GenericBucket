@@ -5,9 +5,9 @@
         "identifier": "996ICU",
         "url": "https://github.com/996icu/996.ICU/blob/master/LICENSE"
     },
-    "version": "2.2.1",
-    "url": "https://github.com/Molunerfinn/PicGo/releases/download/v2.2.2/PicGo-Setup-2.2.2.exe",
-    "hash": "22625c42976cf97c7d20dbf91786c5101d124c0327d29fc0078f2f15e53c1334",
+    "version": "2.3.0-beta.8",
+    "url": "https://github.com/Molunerfinn/PicGo/releases/download/v2.3.0-beta.8/PicGo-Setup-2.3.0-beta.8-x64.exe",
+    "hash": "b9541355852ed5f04f0003e5c568f6b9572b8d7dcd3604a82b7a1c24050533ba",
     "bin": "PicGo.exe",
     "shortcuts": [
         [
