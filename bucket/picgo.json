@@ -1,19 +1,13 @@
 {
     "homepage": "https://github.com/Molunerfinn/PicGo",
-    "description": "A simple & beautiful tool for pictures uploading built by electron-vue.",
-    "version": "2.3.0-beta.8",
+    "description": "a tool of image hosting client",
     "license": {
         "identifier": "996ICU",
-        "url": "https://github.com/Molunerfinn/PicGo/blob/dev/LICENSE"
+        "url": "https://github.com/996icu/996.ICU/blob/master/LICENSE"
     },
-    "url": "https://github.com/Molunerfinn/PicGo/releases/download/v2.3.0-beta.8/PicGo-Setup-2.3.0-beta.8-x64.exe#dl.7z",
-    "hash": "sha512: 52974ad8b5ae9d90e3465bd2631ac82f6ad47840091bc361ecf9d96449e2014f72ba7dbf58643d6352bc4a3e291b3f49a15049788a8da489bacee70369d229c3",
-    "installer": {
-        "script": [
-            "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-            "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninst*\" -Force -Recurse"
-        ]
-    },
+    "version": "2.2.1",
+    "url": "https://github.com/Molunerfinn/PicGo/releases/download/v2.2.2/PicGo-Setup-2.2.2.exe",
+    "hash": "22625c42976cf97c7d20dbf91786c5101d124c0327d29fc0078f2f15e53c1334",
     "bin": "PicGo.exe",
     "shortcuts": [
         [
@@ -21,16 +15,15 @@
             "PicGo"
         ]
     ],
-    "checkver": {
-        "url": "https://github.com/Molunerfinn/PicGo/releases",
-        "regex": "releases/tag/v([\\d.]+)\""
-    },
+    "pre_install": [
+        "Expand-7zipArchive -Path \"$dir\\$fname\" -DestinationPath \"$dir\\_tmp\"",
+        "Get-ChildItem -Path \"$dir\\_tmp\" -Depth \"2\" -Include \"*.7z\" | Move-Item -Destination \"$dir\\_tmp\"",
+        "Expand-7zipArchive -Path \"$dir\\_tmp\\app-64.7z\" -DestinationPath \"$dir\"",
+        "Remove-Item -Recurse \"$dir\\_tmp\", \"$dir\\$fname\""
+    ],
+    "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/Molunerfinn/PicGo/releases/download/v$version/PicGo-Setup-$version.exe#/dl.7z",
-        "hash": {
-            "url": "https://github.com/Molunerfinn/PicGo/releases/download/v$version/latest.yml",
-            "mode": "extract",
-            "regex": "(?sm)exe.*sha512: $base64"
-        }
-    }
+        "url": "https://github.com/Molunerfinn/PicGo/releases/download/v$version/picgo-setup-$version.exe"
+    },
+    "depends": "7zip"
 }
