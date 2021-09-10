@@ -6,7 +6,7 @@
         "identifier": "996ICU",
         "url": "https://github.com/Molunerfinn/PicGo/blob/dev/LICENSE"
     },
-    "url": "https://github.com/Molunerfinn/PicGo/releases/download/v2.3.0-beta.8/PicGo-Setup-2.3.0-beta.8-x64.exe#dl.7z"
+    "url": "https://github.com/Molunerfinn/PicGo/releases/download/v2.3.0-beta.8/PicGo-Setup-2.3.0-beta.8-x64.exe#dl.7z",
     "hash": "b9541355852ed5f04f0003e5c568f6b9572b8d7dcd3604a82b7a1c24050533ba",
     "installer": {
         "script": [
