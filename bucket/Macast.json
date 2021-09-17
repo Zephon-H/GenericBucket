@@ -1,0 +1,18 @@
+{
+    "homepage": "https://github.com/xfangfang/Macast/",
+    "description": "none",
+    "version": "0.64",
+    "url": "https://github.com/xfangfang/Macast/releases/download/v0.64/Macast-Windows-v0.64.exe",
+    "hash": "4c8ea297e4735772516071df09246bf8b49d2926c1f84b26004932f83821d0a3",
+    "bin": "Macast-Windows-v0.64.exe",
+    "shortcuts": [
+        [
+            "Macast.exe",
+            "Macast"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/xfangfang/Macast/releases/download/v$version/Macast-Windows-v$version.exe"
+    }
+}
