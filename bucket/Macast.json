@@ -7,7 +7,7 @@
     "bin": "Macast-Windows-v0.64.exe",
     "shortcuts": [
         [
-            "Macast.exe",
+            "Macast-Windows-v$version.exe",
             "Macast"
         ]
     ],
