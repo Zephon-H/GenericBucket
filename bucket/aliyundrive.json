@@ -1,21 +1,18 @@
 {
-    "version": "2.4.0",
-    "description": "Aliyundrive is a fast, non-intrusive, secure enough, easy to share personal network disk.",
+    "version": "3.1.1",
+    "description": "The official client for Alibaba's cloud dirve service",
     "homepage": "https://www.aliyundrive.com/",
     "license": {
-        "identifier": "Proprietary",
+        "identifier": "EULA",
         "url": "https://www.aliyundrive.com/protocol/service"
     },
-    "url": "https://yunpan.aliyun.com/downloads/apps/desktop/aDrive-2.4.0.exe#/dl.7z",
-    "hash": "sha512:712ee39677f6f3c90286d123464625ad0d0666d8b5819dd747645b694575b958442aab4c0d5de477dfc97bddd2ded3fdbb62ee3eefe441d678028e95312801c0",
-    "pre_install": [
-        "Remove-Item \"$dir\\$*\" -Recurse",
-        "Remove-Item \"$dir\\Uninst*\" -Recurse"
+    "url": "https://tongyongxiezuo.oss-cn-zhangjiakou.aliyuncs.com/desktop/aDrive-desktop/3.1.1/update/win32/ia32/aDrive-3.1.1.exe#/aDrive-3.1.1.7z",
+    "hash": "sha512:380080a21026fa69840ad7df22dd0a28b11e0ab7ea688f56239b23334938da24964a37634c4e49e8630aaf3eb017e55760fcf4fae24291a63a5a3c48f9180d0e",
+    "post_install": [
+        "@('$PLUGINSDIR', '$TEMP') | ForEach-Object {",
+        "    Remove-Item \"$dir\\$_\" -Recurse -Force",
+        "}"
     ],
-    "uninstaller": {
-        "script": "Write-Host \"Remove User Data: 'Remove-Item -Path \"$env:APPDATA\\aDrive\" -Recurse -Force'\" -Foreground Magenta"
-    },
-    "bin": "aDrive.exe",
     "shortcuts": [
         [
             "aDrive.exe",
@@ -23,15 +20,15 @@
         ]
     ],
     "checkver": {
-        "url": "https://github.com/Ryanjiena/scoop-apps/raw/version/aliyundrive-latest.yml",
-        "regex": "^version:[\\s]+([\\d.]+)"
+        "script": "return (iwr -useb \"$($(iwr -useb 'https://www.aliyundrive.com/desktop/version/update.json' | ConvertFrom-Json).url)/win32/ia32/latest.yml\")",
+        "re": "version: ([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://yunpan.aliyun.com/downloads/apps/desktop/aDrive-$version.exe#/dl.7z",
+        "url": "https://tongyongxiezuo.oss-cn-zhangjiakou.aliyuncs.com/desktop/aDrive-desktop/$version/update/win32/ia32/aDrive-$version.exe#/aDrive-$version.7z",
         "hash": {
-            "url": "https://github.com/Ryanjiena/scoop-apps/raw/version/aliyundrive-latest.yml",
+            "url": "https://g.alicdn.com/aliyun-drive-fe/aliyun-drive-desktop-version/$version/win32/ia32/latest.yml",
             "mode": "extract",
-            "regex": "sha512.*?$base64"
+            "regex": "sha512: $base64"
         }
     }
 }
