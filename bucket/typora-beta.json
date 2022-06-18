@@ -1,52 +1,34 @@
 {
-    "version": "0.11.18",
-    "description": "A decent markdown editor finally available on Windows",
     "homepage": "https://typora.io",
-    "license": {
-        "identifier": "Freeware",
-        "url": "https://support.typora.io/License-Agreement/"
-    },
-    "notes": "Free during beta",
+    "description": "Typora � a minimal markdown editor, markdown reader.",
+    "version": "0.9.9.60",
     "architecture": {
         "64bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/Typora/typora_0.11.18_x64_1117.exe",
-            "hash": "51ddc37ddac94eeb0d92d0fef6fea02cf9339628472c9ddf7c3e13a7694be738"
+            "url": "https://typora.io/windows/typora-setup-x64.exe",
+            "hash": "0afcb283e30dba4722fbbaa96395c671e2af97a55246e2bfad91e6c2c0ad3d0f"
         },
         "32bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/Typora/typora_0.11.18_ia32_1117.exe",
-            "hash": "4784a2fa4e4c1918647cf12f3945c70dc281aa2f587326af7e16fb4c5f981915"
+            "url": "https://typora.io/windows/typora-setup-ia32.exe",
+            "hash": "b91c7fd57ad5ba9594aa4adf16f5927c1c9509e265ee3349b18e2e39089c91a7"
         }
     },
     "innosetup": true,
     "bin": "Typora.exe",
     "shortcuts": [
-        [
-            "Typora.exe",
-            "Typora"
-        ]
+        [ "Typora.exe", "Editor\\Typora" ]
     ],
     "checkver": {
-        "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/version/version",
-        "jsonpath": "$.typora-beta-64bit.url",
-        "regex": "(?s)(?<path>Public/scoop/Typora/(?<filename>typora_(?<version>[\\d.]+)_(?<arch>ia32|x64)_(?<date>[\\d]{4})\\.(?:exe|msi)))"
+        "url": "https://typora.io/windows/dev_release.html",
+        "##": "<h4>([\\d.]+) \\(beta\\)</h4>",
+        "re": "(?si)<h4[^>]*>\\s*([\\d.]+)[^<]*</h4[^>]*>"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/Typora/typora_$version_x64_$matchDate.exe",
-                "hash": {
-                    "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/version/version",
-                    "mode": "json",
-                    "jsonpath": "$.typora-beta-64bit.sha256hash"
-                }
+                "url": "https://typora.io/windows/typora-setup-x64.exe"
             },
             "32bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/Typora/typora_$version_ia32_$matchDate.exe",
-                "hash": {
-                    "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/version/version",
-                    "mode": "json",
-                    "jsonpath": "$.typora-beta-32bit.sha256hash"
-                }
+                "url": "https://typora.io/windows/typora-setup-ia32.exe"
             }
         }
     }
