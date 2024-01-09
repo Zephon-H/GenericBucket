@@ -3,7 +3,7 @@
     "description": "国产软件FinalShell SSH工具",
     "homepage": "https://www.hostbuf.com/t/988.html",
     "license": "Freeware",
-    "notes": "https://github.com/ViCrack/scoop-bucket/blob/master/bucket/finalshell.json",
+    "notes": "https://github.com/Zephon-H/ZephonBucket/edit/master/bucket/finalshell.json",
     "url": "http://www.hostbuf.com/downloads/finalshell_install.exe#/dl.7z",
     "hash": "a0f3f05a80ac341c8ad4375ed725b76545ceddafd959688800423876f0a342fd",
     "pre_install": [
