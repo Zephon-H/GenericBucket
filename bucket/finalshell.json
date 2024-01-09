@@ -1,10 +1,10 @@
 {
-    "version": "4.2.4",
+    "version": "4.3.10",
     "description": "国产软件FinalShell SSH工具",
     "homepage": "https://www.hostbuf.com/t/988.html",
     "license": "Freeware",
     "notes": "https://github.com/Zephon-H/ZephonBucket/edit/master/bucket/finalshell.json",
-    "url": "http://www.hostbuf.com/downloads/finalshell_install.exe#/dl.7z",
+    "url": "http://www.hostbuf.com/downloads/finalshell_windows_x64.exe#/dl.7z",
     "hash": "a0f3f05a80ac341c8ad4375ed725b76545ceddafd959688800423876f0a342fd",
     "pre_install": [
         "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
@@ -29,6 +29,6 @@
         "regex": "\"FinalShell ([\\d.]+)\","
     },
     "autoupdate": {
-        "url": "http://www.hostbuf.com/downloads/finalshell_install.exe#/dl.7z"
+        "url": "http://www.hostbuf.com/downloads/finalshell_windows_x64.exe#/dl.7z"
     }
 }
